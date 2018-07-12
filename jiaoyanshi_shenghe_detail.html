@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/shengheren.css">
+    <script src="js/my_judje.js">
+
+    </script>
+    <link rel="stylesheet" href="css/count.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="main">
+    <!--导航条-->
+    <div class="nav">
+        <div class="logo">
+            <!--logo图片-->
+            <img src="imges/logo.png" alt="">
+        </div>
+
+        <!--个人登录-->
+        <div class="person-status">
+            <span>欢迎你：</span>
+            <span id="drop_down">
+            评审人<span class="caret icon-down"></span>
+            <div id="drop_name">
+                <ul>
+                    <li><a href="person.html">个人资料</a></li>
+                </ul>
+            </div>
+        </span>
+            <span><a href="">退出</a></span>
+        </div>
+    </div>
+
+
+    <!--中部内容-->
+
+    <!--左侧选项卡-->
+    <div class="options-list">
+        <ul>
+            <li class="profile-li" id="person-detail">
+                <a href="#" ><span class="glyphicon glyphicon-user"></span>个人中心</a>
+                <!--<span class="glyphicon glyphicon-chevron-down icon"></span>-->
+            </li>
+            <ul class="subnav1 my1" id="check1">
+                <li><a href="person.html">个人信息</a></li>
+                <li><a href="#">修改密码</a></li>
+                <li><a href="#">修改邮箱</a></li>
+            </ul>
+
+            <li id="wodepingshen"><a href=""><span class="glyphicon glyphicon-pencil"></span>我的评审</a></li>
+            <li id="phb"><a href="paihangbang.html"><span class=" glyphicon glyphicon-sort "></span>排行榜</a></li>
+        </ul>
+    </div>
+    <!--内容-->
+    <div class="content">
+        <div class="filter-bar">
+            <span><a href="jiaoyanshi_shenghe.html">教研室审核</a>>
+            <a href="">xxx教研室审核</a>
+            </span>
+            <div class="cooperation">
+                合伙人：<a href="" title="电话：123456798">老王</a>
+            </div>
+        </div>
+        <div class="show">
+            <div class="judge_box">
+                <form class="form-horizontal lf" style="width: 600px">
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">教研室名称</label>
+                        <div class="col-lg-10">
+                            <input class="form-control disabled" type="text" placeholder="教研室名称xxx" disabled="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">模块</label>
+                        <div class="col-lg-10">
+                            <input class="form-control disabled" type="text" placeholder="模块xxx" disabled="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">文件</label>
+                        <div class="col-lg-10">
+                            <a href="">在线浏览</a>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">分数</label>
+                        <div class="col-lg-10">
+                            <input class="form-control"  type="number" max="100" min="0" value="xxx">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">意见</label>
+                        <div class="col-lg-10">
+                        <textarea class="form-control" rows="8" cols="8" style="pading-left:5%;width: 100%" ></textarea>
+                        </div>
+                    </div>
+                    <button style="float: right" type="button" class="btn btn-default">提交</button>
+                </form>
+                <div class="info">
+                    <h3>
+                        制度建设：
+                    </h3>
+                    <div class="claim">
+                        制度，也称规章制度，是国家机关、社会团体、企事业单位，为了维护正常的工作、劳动、学习、生活的秩序，保证国家各项政策的顺利执行和各项工作的正常开展，依照法律、法令、政.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <span>Nanyang institute of Technology 中国 河南 南阳市长江路80号</span><br>
+        <span>GIS研发工作室</span>
+    </div>
+</div>
+
+
+
+</body>
+</html>

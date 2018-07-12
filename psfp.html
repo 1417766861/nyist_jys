@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="js/index.js"></script>
+    <script  src="js/fenpei.js"></script>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/count.css">
+</head>
+<body>
+<!--导航条-->
+<div class="nav">
+    <div class="logo">
+        <!--logo图片-->
+        <img src="imges/logo.png" alt="">
+    </div>
+
+    <!--个人登录-->
+    <div class="person-status">
+        <span>欢迎你：</span>
+        <span id="drop_down">
+            管理员<span class="caret icon-down"></span>
+            <div id="drop_name">
+                <ul>
+                    <li><a href="person.html">个人资料</a></li>
+                </ul>
+            </div>
+        </span>
+        <span><a href="">退出</a></span>
+    </div>
+</div>
+
+
+<!--中部内容-->
+<div class="main">
+    <!--左侧选项卡-->
+    <div class="options-list">
+        <ul>
+            <li class="profile-li" id="person-detail">
+                <a href="#" ><span class="glyphicon glyphicon-user"></span>个人中心</a>
+                <!--<span class="glyphicon glyphicon-chevron-down icon"></span>-->
+            </li>
+            <ul class="subnav1 my1" id="check1">
+                <li><a href="person.html">个人信息</a></li>
+                <li><a href="#">修改密码</a></li>
+                <li><a href="#">修改邮箱</a></li>
+            </ul>
+
+            <li id="id-detail"><a href=""><span class="glyphicon glyphicon-wrench"></span>账号管理</a>
+                <span class="glyphicon glyphicon-chevron-down icon"></span>
+            </li>
+
+            <ul class="subnav2 my2" id="check2">
+                <li><a href="xueyuan_count.html">学院账号管理</a></li>
+                <li><a href="jiaoyanshi_count.html">教研室账号管理</a></li>
+                <li><a href="pingshen_count.html">评审人账号管理</a></li>
+            </ul>
+            <li id="psfp"><a href="psfp.html"><span class="glyphicon glyphicon-tasks"></span>评审分配</a></li>
+            <li id="jysck"><a href="see_jys.html"><span class="glyphicon glyphicon-list "></span>教研室查看</a></li>
+            <li id="lsjl"><a href="history.html"><span class="glyphicon glyphicon-folder-open"></span>历史纪录</a></li>
+            <li id="phb"><a href="paihangbang.html"><span class=" glyphicon glyphicon-sort "></span>排行榜</a></li>
+        </ul>
+    </div>
+    <!--内容-->
+    <div class="content">
+        <div class="filter-bar">
+            评审分配
+        </div>
+        <div class="show">
+            <div class="ps_list fenpeiactive"onclick="show(event,'wkfp')">
+                <span>文科教研室分配</span>
+            </div>
+            <div class="ps_list"  onclick="show(event,'lkfp')">
+                <span>理科教研室分配</span>
+            </div><br><br>
+            <div id="wkfp" class="fenpeicontent">
+                <div class="select-box">
+                    <table class=" table table-bordered">
+                        <thead>
+                            <th>模块</th>
+                            <th>选择人</th>
+                            <th>操作</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>教学效果</td>
+                                <td id="persons">
+
+                                </td>
+                                <td>
+                                    <button class="btn btn-info accordion">选人</button>
+                                    <button class="btn btn-danger" id="clear">清空</button>
+                                    <div class="canel" style="display: none">
+                                        <input type="checkbox" value="qq"> qq
+                                        <input type="checkbox" value="ww"> ww
+                                        <input type="checkbox" value="ee"> ee
+                                        <input type="checkbox" value="rr"> rr
+                                        <input type="checkbox" value="tt"> tt
+                                        <input type="checkbox" value="aa"> aa
+                                        <input type="checkbox" value="bb">bb
+                                        <span class="glyphicon glyphicon-remove icon-x"></span>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>教学效果</td>
+                                <td>
+                                    <button class="btn btn-info accordion">选人</button>
+                                    <button class="btn btn-danger clear">清空</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="lkfp" class="fenpeicontent" style="display: none">理科教研室分配</div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="footer">
+
+</div>
+</body>
+</html>

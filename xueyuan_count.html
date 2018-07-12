@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="js/index.js"></script>
+    <script src="js/xueyuan_count.js"></script>
+    <link rel="stylesheet" href="css/count.css">
+
+
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="main">
+<!--导航条-->
+<div class="nav">
+    <div class="logo">
+        <!--logo图片-->
+        <img src="imges/logo.png" alt="">
+    </div>
+
+    <!--个人登录-->
+    <div class="person-status">
+        <span>欢迎你：</span>
+        <span id="drop_down">
+            管理员<span class="caret icon-down"></span>
+            <div id="drop_name">
+                <ul>
+                    <li><a href="person.html">个人资料</a></li>
+                </ul>
+            </div>
+        </span>
+        <span><a href="">退出</a></span>
+    </div>
+</div>
+
+
+<!--中部内容-->
+
+    <!--左侧选项卡-->
+    <div class="options-list">
+        <ul>
+            <li class="profile-li" id="person-detail">
+                <a href="#" ><span class="glyphicon glyphicon-user"></span>个人中心</a>
+                <!--<span class="glyphicon glyphicon-chevron-down icon"></span>-->
+            </li>
+            <ul class="subnav1 my1" id="check1">
+                <li><a href="person.html">个人信息</a></li>
+                <li><a href="#">修改密码</a></li>
+                <li><a href="#">修改邮箱</a></li>
+            </ul>
+
+            <li id="id-detail"><a href=""><span class="glyphicon glyphicon-wrench"></span>账号管理</a>
+                <span class="glyphicon glyphicon-chevron-down icon"></span>
+            </li>
+
+            <ul class="subnav2 my2" id="check2">
+                <li><a href="xueyuan_count.html">学院账号管理</a></li>
+                <li><a href="jiaoyanshi_count.html">教研室账号管理</a></li>
+                <li><a href="pingshen_count.html">评审人账号管理</a></li>
+            </ul>
+            <li id="psfp"><a href="psfp.html"><span class="glyphicon glyphicon-tasks"></span>评审分配</a></li>
+            <li id="jysck"><a href="see_jys.html"><span class="glyphicon glyphicon-list "></span>教研室查看</a></li>
+            <li id="lsjl"><a href="history.html"><span class="glyphicon glyphicon-folder-open"></span>历史纪录</a></li>
+            <li id="phb"><a href="paihangbang.html"><span class=" glyphicon glyphicon-sort "></span>排行榜</a></li>
+        </ul>
+    </div>
+    <!--内容-->
+    <div class="content">
+        <div class="filter-bar">
+            <span><a href="">账号管理</a></span>
+            <span>></span>
+            <span><a href="">学院账号管理</a></span>
+            <div class="search">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入关键字">
+                        <button type="button" class="btn btn-success">搜索</button>
+                    </div>
+                </div>
+            </div>
+            <div class="add_btn">
+                <!-- Small modal -->
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-sm">添加账号</button>
+
+                <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                    <div class="modal-dialog modal-sm" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">添加账号</h4>
+
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label>账号</label>
+                                        <input style="margin-left: 30px" type="password" class="form-control" placeholder="请输入账号">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>密码</label>
+                                        <input style="margin-left: 30px" type="password" class="form-control" placeholder="请输入密码">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>所属人</label>
+                                        <input style="margin-left: 15px" type="password" class="form-control" placeholder="请输入所属人">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>电话号码</label>
+                                        <input type="password" class="form-control" placeholder="请输入电话">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>所属系院</label>
+                                        <select class="form-control">
+                                            <option>软件学院</option>
+                                            <option>电商学院</option>
+                                            <option>国医学院</option>
+                                            <option>艺设学院</option>
+                                            <option>电气学院</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                <button type="button" class="btn btn-primary">保存</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="show">
+            <table class="table table-bordered" style="padding: 0;margin: 0">
+                <thead>
+                <th class="active">所属系院</th>
+                <th class="active">账号</th>
+                <th class="active">密码</th>
+                <th class="active">所属人</th>
+                <th class="active">电话</th>
+                <th class="active">操作</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>软件学院</td>
+                    <td>111111</td>
+                    <td>xxxxxx</td>
+                    <td>xxxxxx</td>
+                    <td>xxxxxx</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">编辑</button>
+                        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="exampleModalLabel">软件学院&nbsp; > &nbsp;信息编辑</h4>
+                                    </div>
+                                    <div class="edit-model">
+                                            <div class="form-group">
+                                                <label>所属系院</label>
+                                                <input type="password" class="form-control" placeholder="软件学院">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>账号</label>
+                                                <input type="password" class="form-control" placeholder="111111">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>密码</label>
+                                                <input type="password" class="form-control" placeholder="xxxxxx">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>所属人</label>
+                                                <input type="password" class="form-control" placeholder="xxxxxx">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>电话</label>
+                                                <input type="password" class="form-control" placeholder="xxxxxx">
+                                            </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                        <button type="button" class="btn btn-primary">保存</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-danger">删除</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>外国语学院</td>
+                    <td>222222</td>
+                    <td>xxxxxx</td>
+                    <td>xxxxxx</td>
+                    <td>xxxxxx</td>
+                    <td><button type="button" class="btn btn-info">编辑</button>
+                        <button type="button" class="btn btn-danger">删除</button></td>
+                </tr>
+                <tr>
+                    <td>张仲景国医学院</td>
+                    <td>333333</td>
+                    <td>xxxxxx</td>
+                    <td>xxxxxx</td>
+                    <td>xxxxxx</td>
+                    <td><button type="button" class="btn btn-info">编辑</button>
+                        <button type="button" class="btn btn-danger">删除</button></td>
+                </tr>
+                <tr>
+                    <td>外国语学院</td>
+                    <td>222222</td>
+                    <td>xxxxxx</td>
+                    <td>xxxxxx</td>
+                    <td>xxxxxx</td>
+                    <td><button type="button" class="btn btn-info">编辑</button>
+                        <button type="button" class="btn btn-danger">删除</button></td>
+                </tr>
+
+
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="footer">
+        <span>Nanyang institute of Technology 中国 河南 南阳市长江路80号</span><br>
+        <span>GIS研发工作室</span>
+    </div>
+</div>
+
+
+
+</body>
+</html>

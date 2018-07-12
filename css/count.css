@@ -1,0 +1,91 @@
+
+.add_btn{
+    right: 0;
+    padding-right: 20px;
+    position: absolute;
+}
+.search{
+    right: 0;
+    padding-top: 15px;
+    position: absolute;
+    padding-right: 17%;
+    line-height: 20px;}
+button:hover{cursor: pointer}
+.edit-model{
+    margin: 0 auto;
+    width: 50%;
+    padding-top: 5%;
+    color: #2fa836;
+    background: white;
+}
+.edit-model button{
+    float: right;
+   margin-left: 10px;
+}
+.mk_list{
+    width: 9%;
+    height:25px;
+    line-height: 25px;
+    color: #9b73e4;
+    text-align: center;
+    font-size: 15px;
+    float: left;
+    transition: 0.3s;
+}
+.mk_list:hover{cursor: pointer;background-color: #ccc;}
+.myactive{ border-bottom: 3px solid #9b73e4;}
+.tabcontent{padding-top: 20px;width: 50%;}
+.view span{padding-left: 20px;text-align: center}
+a:hover{cursor: pointer}
+
+/*评审分配*/
+.ps_list{
+    font-size: 20px;
+    float: left;color: #2fa836;
+    background: #f1f1f1;
+    transition: 0.3s;
+    width: 50%;
+    text-align: center;
+}
+.ps_list span{text-align: center;
+    height: 40px;line-height: 40px;padding: 10px}
+.ps_list:hover{background: #ddd;cursor: pointer}
+.fenpeicontent{float: left;padding-top: 20px;width: 50%}
+.fenpeiactive{ background-color: #ccc;}
+.canel{
+    background: #afc0f1;
+    position: relative;
+}
+.icon-x{position: absolute;right: -20px;cursor: pointer;}
+.canel input{padding-left: 20px}
+.myselected {
+    display: none !important;
+}
+
+.tab-content h3 {
+    text-align: center
+}
+
+.nav-tabs {
+    text-align: center;
+    padding-left: 45%
+}
+
+.wenkemodel-box {
+    position: relative;
+    margin-left: 20%;
+}
+
+.model-box {
+    position: relative;
+    width: 50%;
+    margin:0 25%;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+
+.mybutton{
+    position: relative;
+    left:60%;
+    margin-top: 10px;
+}
