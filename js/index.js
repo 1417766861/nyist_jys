@@ -30,6 +30,7 @@ $(function () {
         }
     });
 
+
     $("#id-detail").click(function (event) {
         event.preventDefault();
         var that = $(this);
@@ -58,5 +59,16 @@ $(function () {
             drop=0;
         }
     })
+    $("#judge").click(function (event) {
+        event.preventDefault();
+        var that = $(this);
+        if($("#check3").hasClass('subnav3')){
+            $("#check3").removeClass('subnav3');
+            $("#check3").css('padding-left','0%');
+            $("#check3").addClass('my3');
+        } else{
+            $("#check3").addClass('subnav3')
+        }
+    });
 });
 
